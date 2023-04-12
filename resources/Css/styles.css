@@ -1,6 +1,9 @@
-.Body-header{
+body{
+    background: #F3F5FC;
+}
 
-    width: 100%;
+.Body-header{
+    width: auto;
     height: 3.50rem;
     display: flex;
     align-items: center;
@@ -9,31 +12,102 @@
 }
 
 .cotainer-logo{
+    width: 2rem;
+    height: 3rem;
     padding: 0px 0px;
     margin: 0px 0px;
 }
 
-.Logo-principal{
-    width: 120px;
-    height: 48px;
-}
 .Body-main{
-    background-color: aquamarine;
-    border: 1px solid black;
+    height: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: auto;
 }
 .input-section{
-    background-color: bisque;
+  width: auto;
 }
-.formulario-section{
-
-}
+/* .formulario-section{
+ 
+} */
 .textarea-entrada{
-
+    width: 99%;
+    color: #0A3871;
+    resize: none;
+    border: none;
+ 
+    min-height: 14rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .section-warning{
-
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+.warning-icon{
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
+.text-warning{
+    padding: 1rem 0rem;
+    color: #747980;
 }
 .section-buttons{
-
+    flex-direction: column;
+    width: auto;
+    height: 9.875rem;
+    margin-bottom: 4rem;
 }
+.button-Encriptar{
+    background-color: #0A3871;
+    color:  white;
+    width: 100%;
+    border: none;
+    height: 4rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+.button-Desencriptar{
+    color:  #0A3871;
+    width: 100%;
+    border: 0.25px solid #0A3871;
+    height: 4rem;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+}
+.output-section{
+    margin-top: 2rem;
+    width: 100%;
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-texto{
+
+    width:16.438rem;
+
+} 
+.container-texto h3{
+    color: #343A40;
+    display: flex;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom:0.5rem;
+    padding: 0.25rem 1rem;
+    font-weight: 500;
+} 
+.container-texto p{
+    display: flex;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #b6bcc1;
+    padding: 0.25rem 1rem;
+    font-weight: bold;
+} 
+
