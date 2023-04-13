@@ -5,32 +5,37 @@ const cambiar = {
     o: "ober",
     u: "ufat",
 }
-const Encriptar = (texto) => {
-    let textoencriptado = "";
-    
-    for (let index = 0; index < texto.length; index++) {
-        if(cambiar[texto[index]]){
-        textoencriptado = textoencriptado + cambiar[texto[index]]
+const Encriptar = () => {
+    let texto = textocampturado.value;
+    if (!texto){
+        return false
+    }else{
+        let textoencriptado ="";
+        for (let index = 0; index < texto.length; index++) {
+            if(cambiar[texto[index]]){
+            textoencriptado = textoencriptado + cambiar[texto[index]]
+            }
+            textoencriptado= textoencriptado + texto[index]
         }
-        textoencriptado= textoencriptado + texto[index]
+        console.log(textoencriptado)
+        return textoencriptado
     }
-
-    return textoencriptado
 
 }
 const Desencriptar = () => {
-    return
+    return console.log("hola")
 
 }
 
  let textocampturado = document.querySelector("textarea");
  let actionEn = document.getElementById("encriptarButton")
  let actionDes = document.getElementById("desencriptarButton")
- let valor = textocampturado.value;
  
- let saveTexto = Encriptar(valor);
- actionEn.onclick = saveTexto;
+ const textoEncriptado = Encriptar();
+ 
+ document.getElementById("resultado").innerHTML = textoEncriptado === false ? "": textoEncriptado;
+ 
+ actionEn.onclick = Encriptar;
  actionDes.onclick = Desencriptar;
 
 
- console.log()
