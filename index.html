@@ -28,7 +28,7 @@
         <section class="input-section">
             <!-- <form class="formulario-section" action=""> -->
                 <div>
-                    <textarea required class="textarea-entrada" placeholder="Ingrese el texto aqui" name="" id=""
+                    <textarea id="textoDeEntrada" required class="textarea-entrada" placeholder="Ingrese el texto aqui" name="" id=""
                         ></textarea>
                 </div>
 
@@ -50,8 +50,11 @@
         <section class="output-section">
             <div class="container-texto">
                 <h3>Ningun mensaje fue encontrado</h3>
-                <p>Ingrese el texto que desees encriptar o desencriptar</p>
-                <p id="resultado"></p>
+                <p class="texto-default">Ingrese el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="container-texto-copiar">
+                <p id="resultado" class="texto-encriptadoOut"></p>
+                <button id="Copiar-texto" class="copiar-button">Copiar</button>
             </div>
         </section>
     </main>

@@ -5,8 +5,8 @@ const cambiar = {
     o: "ober",
     u: "ufat",
 }
-const Encriptar = () => {
-    let texto = textocampturado.value;
+const Encriptar = (texto) => {
+    
     if (!texto){
         return false
     }else{
@@ -27,15 +27,29 @@ const Desencriptar = () => {
 
 }
 
- let textocampturado = document.querySelector("textarea");
- let actionEn = document.getElementById("encriptarButton")
- let actionDes = document.getElementById("desencriptarButton")
+function Capturar(){
+    const textocampturado = document.getElementById("textoDeEntrada").value;
+    const etiquetaP = document.getElementById("resultado")
+    etiquetaP.innerHTML = Encriptar(textocampturado)
+}
+
+let actionEn = document.getElementById("encriptarButton");
+let actionDes = document.getElementById("desencriptarButton");
+let actionCopi= document.getElementById("Copiar-texto");
+
+actionCopi.addEventListener("click", () => {
+    let textoaCopiar= document.getElementById("resultado").textContent
+    navigator.clipboard.writeText(textoaCopiar)
+        .then(() => {
+            console.log("Texto copiado al portapapeles!");
+        })
+        .catch((error) => {
+            console.error("Error al copiar el texto:", error);
+        });
+});
  
- const textoEncriptado = Encriptar();
  
- document.getElementById("resultado").innerHTML = textoEncriptado === false ? "": textoEncriptado;
- 
- actionEn.onclick = Encriptar;
+ actionEn.onclick = Capturar;
  actionDes.onclick = Desencriptar;
 
 

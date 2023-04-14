@@ -1,5 +1,5 @@
 body{
-    background: #F3F5FC;
+    background: #dcdfec;
 }
 
 .Body-header{
@@ -21,6 +21,7 @@ body{
 .Body-main{
     height: auto;
     margin-top: 1rem;
+    margin-bottom: 0.1rem;
     padding: 1rem;
     width: auto;
 }
@@ -35,10 +36,9 @@ body{
     color: #0A3871;
     resize: none;
     border: none;
- 
     min-height: 14rem;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .section-warning{
@@ -81,15 +81,20 @@ body{
 .output-section{
     margin-top: 2rem;
     width: 100%;
-    height: 11rem;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 4rem;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
 }
+
 .container-texto{
 
     width:16.438rem;
+    display: none;
 
 } 
 .container-texto h3{
@@ -101,7 +106,8 @@ body{
     padding: 0.25rem 1rem;
     font-weight: 500;
 } 
-.container-texto p{
+.container-texto .texto-defaul{
+    
     display: flex;
     font-size: 1rem;
     text-align: center;
@@ -111,3 +117,30 @@ body{
     font-weight: bold;
 } 
 
+.container-texto-copiar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+
+}
+
+.texto-encriptadoOut{
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #0979ea;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+
+}
+.copiar-button{
+    color:  #0A3871;
+    width: 20rem;
+    border: 0.25px solid #0A3871;
+    height: 4rem;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+}
