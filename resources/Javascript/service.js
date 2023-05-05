@@ -31,6 +31,7 @@ function Capturar(){
     const textocampturado = document.getElementById("textoDeEntrada").value;
     const etiquetaP = document.getElementById("resultado")
     etiquetaP.innerHTML = Encriptar(textocampturado)
+
 }
 
 let actionEn = document.getElementById("encriptarButton");
@@ -41,6 +42,7 @@ actionCopi.addEventListener("click", () => {
     let textoaCopiar= document.getElementById("resultado").textContent
     navigator.clipboard.writeText(textoaCopiar)
         .then(() => {
+            alert("texto copiado")
             console.log("Texto copiado al portapapeles!");
         })
         .catch((error) => {
