@@ -21,13 +21,14 @@ body {
 .Body-main {
     height: auto;
     margin-top: 1rem;
-    margin-bottom: 0.1rem;
     padding: 1rem;
+    margin-bottom: 1rem;    
     width: auto;
 }
 
 .input-section {
-    width: auto;
+    width: 100%;
+    margin-bottom: 4rem;
 }
 
 /* .formulario-section{
@@ -61,10 +62,13 @@ body {
 }
 
 .section-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    gap: 1rem;
     width: auto;
     height: 9.875rem;
-    margin-bottom: 4rem;
 }
 
 .button-Encriptar {
@@ -74,7 +78,7 @@ body {
     border: none;
     height: 4rem;
     border-radius: 1.5rem;
-    margin-bottom: 1rem;
+    
 }
 
 .button-Desencriptar {
@@ -83,53 +87,48 @@ body {
     border: 0.25px solid #0A3871;
     height: 4rem;
     border-radius: 1.5rem;
-    margin-top: 1rem;
+    
 }
 
 .output-section {
-    margin-top: 2rem;
-    width: 100%;
+    width: 20rem;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 4rem;
     border-radius: 2rem;
+    margin: 0rem auto 2rem auto;
+    padding: 0.5rem;
 }
 
-.container-texto {
 
-    width: 16.438rem;
+
+.container-texto {
+    width: 100%;
     text-align: center;
-}
-
-.container-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    text-align: center;
     font-family: 'Comme', sans-serif;
-    ;
-    font-weight: bold;
 }
 
 .container-texto h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #343A40;
+    font-weight: bold;
 }
 
 .container-texto p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #495057;
-    font-variant: unicase;
 }
 
 .container-texto-copiar {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -137,7 +136,7 @@ body {
 
 }
 
-.texto-encriptadoOut {
+/* .texto-encriptadoOut {
     padding: 1rem;
     width: 100%;
     margin-bottom: 1rem;
@@ -146,36 +145,78 @@ body {
     text-align: center;
     display: flex;
 
-}
+} */
 
-.copiar-button {
+/* .copiar-button {
     color: #0A3871;
     width: 20rem;
     border: 0.25px solid #0A3871;
     height: 4rem;
     border-radius: 1.5rem;
     margin-top: 1rem;
-}
+} */
 
 /* table */
 @media (min-width: 700px) {
+    .Body-header{
+        padding: 2rem;
+    }
 
-    /* … */
-    /* .section-buttons{
-        display: flex;
+    .Body-main{
+        padding: 2rem;
+    }
+   
+    .textarea-entrada{
+    min-height: 30rem;
+    font-size: 2rem;
+    }
+    .section-buttons{
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-    } */
-    /* primero sec desde abajo para arriba*/
-    .output-section {
+        gap: 1;
+    }
+    .output-section{
         width: 43rem;
-        margin: 0 1.5rem;
+        padding: auto;
+    }
+    .output-section{
+        min-height: 8rem;
         background-color: #FFFFFF;
         box-shadow: 1px 7px 15px 2px rgba(15,15,15,0.45);
         -webkit-box-shadow: 1px 7px 15px 2px rgba(15,15,15,0.45);
         -moz-box-shadow: 1px 7px 15px 2px rgba(15,15,15,0.45);
+    }
+    .container-texto h3{
+        font-size: 1.7rem;
+    }
+    .container-texto p{
+        font-size: 1.1rem;
+    }
+}
+
+/* pc */
+@media (min-width:1024px){
+    .Body-main{
+        padding: 0 0 0 4rem;
+        display: flex;
+        justify-content: center;
+        margin: auto 4rem 4rem 10rem;
+        gap: 4rem;
+        max-height: 81vh
+    }
+    .input-section{
+        margin: 0;
+    }
+    .textarea-entrada{
+        min-height: 36rem;
+    }
+    .output-section{
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 74vh;
     }
 
 }
