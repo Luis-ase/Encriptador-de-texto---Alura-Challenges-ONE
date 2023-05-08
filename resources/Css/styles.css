@@ -35,7 +35,7 @@ body {
  
 } */
 .textarea-entrada {
-    width: 99%;
+    width: 100%;
     color: #0A3871;
     resize: none;
     border: none;
@@ -68,7 +68,7 @@ body {
     flex-direction: column;
     gap: 1rem;
     width: auto;
-    height: 9.875rem;
+    max-height: 8rem;
 }
 
 .button-Encriptar {
@@ -126,7 +126,9 @@ body {
     font-size: 0.9rem;
     color: #495057;
 }
-
+.muñeno{
+    display: none;
+}
 .container-texto-copiar {
     display: none;
     align-items: center;
@@ -136,25 +138,25 @@ body {
 
 }
 
-/* .texto-encriptadoOut {
+.texto-encriptadoOut {
     padding: 1rem;
     width: 100%;
     margin-bottom: 1rem;
-    color: #0979ea;
-    font-size: 1.5rem;
-    text-align: center;
-    display: flex;
+    color: #495057;
+    font-size: 1.2rem;
+   font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 
-} */
+} 
 
-/* .copiar-button {
+ .copiar-button {
     color: #0A3871;
     width: 20rem;
     border: 0.25px solid #0A3871;
     height: 4rem;
     border-radius: 1.5rem;
     margin-top: 1rem;
-} */
+} 
 
 /* table */
 @media (min-width: 700px) {
@@ -207,9 +209,10 @@ body {
         margin: 0;
     }
     .textarea-entrada{
-        min-height: 36rem;
+        min-height: 30rem;
     }
     .output-section{
+
         margin: 0;
         padding: 2rem;
         display: flex;
@@ -218,5 +221,7 @@ body {
         flex-direction: column;
         height: 74vh;
     }
-
+    .container-texto{
+        display: none;
+    }
 }
